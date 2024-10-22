@@ -1,0 +1,586 @@
+body {
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.wrapper {
+    flex: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    background-color: white;
+    border: 5px solid #e3e3e3;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 33px;
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #e3e3e3;
+    grid-column: 1/13;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav__button {
+    background-color: hsla(0, 0%, 100%, 0);
+    color: #0A846E;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main-nav__button:hover {
+    color: #7d60fd;
+    transform: scale(1.2);
+}
+
+header {
+    background-color: red;
+    grid-column: 1 / 13;
+    grid-row: 4 / 13;
+    display: flex;
+    flex-direction: row;
+}
+
+figure, figcaption {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.site-header__wrapper {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.site-header__main {
+    width: 100%;
+}
+
+.site-header__image-box--main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.site-header__image--main {
+    width: 100%;
+    height: 400px;
+    left: 200px;
+}
+
+.site-header__overlay {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding-bottom: 100px;
+}
+
+.site-header__title {
+    position: absolute;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding-top: 150px;
+}
+
+main {
+    grid-column: 1/13;
+    grid-row: 14/70;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+/* Planting Section */
+.planting-section {
+    grid-column: 1 / 13;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planting-section__header {
+    padding-right: 550px;
+}
+
+.planting-section__heading {
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.planting-section__content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.planting-section__input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.planting-section__label {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.planting-section__input {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.planting-section__footer {
+    margin-top: 25px;
+}
+
+.planting-section__button {
+    background-color: #0A846E;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.planting-section__button:hover {
+    background-color: #042e26;
+}
+
+/* Section 2 */
+.section-2 {
+    grid-column: 1/13;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2__heading {
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.section-2__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 65%;
+}
+
+/* Planned Plantings */
+.planned-plantings__card-1 {
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(60% - 40px);
+    max-width: calc(80% - 40px);
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 3/4;
+}
+
+.planned-plantings__card-2 {
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 40px);
+    max-width: calc(30% - 40px);
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 3/4;
+}
+
+.planned-plantings__image-container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    flex: 0 0 auto;
+    height: 72%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.planned-plantings__image {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.planned-plantings__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    margin: 0;
+}
+
+.planned-plantings__overlay-icon {
+    width: 110px;
+    height: auto;
+}
+
+.planned-plantings__content {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.planned-plantings__header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.planned-plantings__plant-name {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.planned-plantings__date {
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.planned-plantings__footer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.planned-plantings__person {
+    background-color: white;
+    margin: 0;
+    font-size: 14px;
+    color: #b0afaf;
+}
+
+.planned-plantings__remove-btn {
+    background-color: #B93857;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.planned-plantings__remove-btn:hover {
+    background-color: #421520;
+}
+
+.planned-plantings__more-btn {
+    background-color: #0A846E;
+    width: 130px;
+    height: 60px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.planned-plantings__more-btn:hover {
+    background-color: #042e26;
+}
+
+/* Section 3 */
+.section-3 {
+    grid-column: 1/13;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3__heading {
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.ssection-3__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+
+/* Section 4 */
+.section-4 {
+    grid-column: 1/13;
+    position: relative;
+    background-color: #9c7052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.section-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9c70523c;
+    z-index: 2;
+}
+
+.section-4__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+
+.section-4__img {
+    width: 180px;
+    height: 250px;
+    position: relative;
+}
+
+
+footer {
+    background-color: white;
+    grid-row: 70/72;
+    grid-column: 1/13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__to-top {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.footer__button {
+    background-color: white;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.footer__button:hover {
+    color: #7d60fd;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    nav {
+        flex-direction: row;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-nav__button {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        grid-row: auto;
+        align-items: center;
+    }
+
+    .site-header__image--main {
+        width: 100%;
+        height: auto;
+    }
+
+    .site-header__overlay {
+        width: 100px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .planting-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .planting-section__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .planting-section__heading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-left: 550px;
+    }
+
+    .planting-section__label {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .planting-section__input {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    .planting-section__button {
+        width: 100%;
+        max-width: 200px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+
+    .planned-plantings__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .planned-plantings__card-1,
+    .planned-plantings__card-2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-2__list,
+    .section-3__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+    }
+
+   
+    .section-4__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-4__img {
+        width: 100%;
+        height: auto;
+    }
+
+   
+    footer {
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .footer__to-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footer__button {
+        width: 100%;
+        max-width: 200px;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
