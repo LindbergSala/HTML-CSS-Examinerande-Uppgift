@@ -26,6 +26,15 @@ header {
   flex-direction: row;
 }
 
+.burgir {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: auto;
+  z-index: 9999;
+}
+
 .header__wrapper {
   background-color: white;
   width: 100%;
@@ -619,293 +628,310 @@ main {
 }
 
 @media (max-width: 768px) {
-  .wrapper {
-    max-width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header__wrapper {
-    order: -1;
-  }
-
-  header {
-    flex-direction: row;
-    height: 100%;
-  }
-
-  .header__wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .header__left {
-    width: 100%;
-    height: 100%;
-  }
-
-  .header__right {
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .header__image-box--top,
-  .header__image-box--bottom {
-    width: 100%;
-    height: 100%;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .main-section__header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    text-align: center;
-  }
-
-  .main-section__title {
-    font-size: 1.8rem;
-    color: #0a846e;
-    padding-bottom: 15%;
-  }
-
-  .main-section__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70%;
-  }
-
-  .main-section__info {
-    width: 100%;
-    height: 40%;
-    order: 1;
-  }
-
-  .main-section__subtitle {
-    text-align: center;
-  }
-
-  .main-section__text {
-    text-align: center;
-  }
-
-  .main-section__button {
-    align-self: center;
-    margin-left: 125px;
-  }
-
-  .main-section__figure {
-    width: 300px;
-    height: 300px;
-    order: 2;
-  }
-
-  .main-section__image {
-    width: 150px;
-    height: 200px;
-  }
-
-  .planned-plantings__title {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 20px 0;
-    color: #000000; 
-  }
-
-  .planned-plantings__row {
-    display: flex;
-    flex-wrap: wrap; /* Låter korten brytas över flera rader */
-    justify-content: space-between; /* Sprider korten jämnt över raden */
-    gap: 20px;
-  }
-
-  .planned-plantings__card {
-    flex: 0 0 calc(50% - 20px); /* Ger varje kort exakt 50% av bredden */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-
-  .planned-plantings__image-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .planned-plantings__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .planned-plantings__content {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .end-section__content {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 20px; 
-    padding: 10px;
-    max-width: 90%;
-  }
-
-  .end-section__figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .end-section__circle {
-    background-color: #0A846E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 100x; 
-    height: 250px; 
-  }
-
-  .end-section__image {
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-    height: auto;
-  }
-
-  .end-section__container {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .end-section__h3 {
-    font-size: 1.5rem;
-  }
-
-  .end-section__text {
-    font-size: 1rem;
-  }
-
-  .end-section__button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+  @media (max-width: 768px) {
+    .wrapper {
+      max-width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
   
-  .footer.frame {
-    width: 95%;
-    padding: 20px 10px;
-    background-color: #ffffff;
-    position: relative;
+    .header__wrapper {
+      order: -1;
+    }
+  
+    header {
+      flex-direction: row;
+      height: 100%;
+    }
+  
+    .header__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  
+    .header__left {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .header__right {
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .header__image-box--top,
+    .header__image-box--bottom {
+      width: 100%;
+      height: 100%;
+    }
+  
+    nav {
+      display: none;
+    }
+
+    .burgir {
+      display: block;
+      width: 40px;
+      padding-top: 10px;
+      padding-right: 10px;
+      width: 50px;
   }
 
-  .footer__image-container {
-    position: relative;
-    width: 100%;
-    height: auto; 
-  }
-
-  .footer__image {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .footer__overlay {
-    position: absolute;
-    top: 275px;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.712);
-    z-index: 1;
-  }
-
-  .footer__logo {
-    position: absolute;
-    top: 130px;
-    left: 130px;
-    width: 150px;
-    height: auto;
-    z-index: 3;
-  }
-
-  .footer__content {
-    position: absolute;
-    top: 340px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 4;
-    color: white;
-  }
-
-  .footer__heading {
-    font-size: 2rem;
-    height: 20;
- 
-  }
-
-  .footer__contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 180px;
-    position: absolute;
-    top: 390px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-  }
-
-  .footer__contact-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .footer__icon {
-    width: 20px;
-    height: auto;
-  }
-
-  .footer__contact-info {
-    font-size: 1rem;
-    color: white;
-  }
-
-  .footer__to-top {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    height: 100px;
-    transform: translateX(-50%);
-    z-index: 6;
-  }
-
-  .footer__button {
-    background-color: #0a846e;
-    color: white;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .footer__button:hover {
-    background-color: #066655;
+  
+    .main-section__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10%;
+      text-align: center;
+    }
+  
+    .main-section__title {
+      font-size: 1.8rem;
+      color: #0a846e;
+      padding-bottom: 15%;
+    }
+  
+    .main-section__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 70%;
+    }
+  
+    .main-section__info {
+      width: 100%;
+      height: 40%;
+      order: 1;
+    }
+  
+    .main-section__subtitle {
+      text-align: center;
+    }
+  
+    .main-section__text {
+      text-align: center;
+    }
+  
+    .main-section__button {
+      align-self: center;
+      margin-left: 125px;
+    }
+  
+    .main-section__figure {
+      width: 300px;
+      height: 300px;
+      order: 2;
+    }
+  
+    .main-section__image {
+      width: 150px;
+      height: 200px;
+    }
+  
+    .planned-plantings__title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 20px 0;
+      color: #000000; 
+    }
+  
+    .planned-plantings__row {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+      gap: 20px;
+    }
+  
+    .planned-plantings__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  
+    .planned-plantings__card {
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      margin-bottom: 20px;
+    }
+  
+    .planned-plantings__image-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .planned-plantings__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .planned-plantings__content {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .end-section__content {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 20px; 
+      padding: 10px;
+      max-width: 90%;
+    }
+  
+    .end-section__figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .end-section__circle {
+      background-color: #0A846E;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 100x; 
+      height: 250px; 
+    }
+  
+    .end-section__image {
+      justify-content: center;
+      align-items: center;
+      max-width: 50%;
+      height: auto;
+    }
+  
+    .end-section__container {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .end-section__h3 {
+      font-size: 1.5rem;
+    }
+  
+    .end-section__text {
+      font-size: 1rem;
+    }
+  
+    .end-section__button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+    
+    .footer.frame {
+      width: 95%;
+      padding: 20px 10px;
+      background-color: #ffffff;
+      position: relative;
+    }
+  
+    .footer__image-container {
+      position: relative;
+      width: 100%;
+      height: auto; 
+    }
+  
+    .footer__image {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .footer__overlay {
+      position: absolute;
+      top: 275px;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: rgba(0, 0, 0, 0.712);
+      z-index: 1;
+    }
+  
+    .footer__logo {
+      position: absolute;
+      top: 130px;
+      left: 130px;
+      width: 150px;
+      height: auto;
+      z-index: 3;
+    }
+  
+    .footer__content {
+      position: absolute;
+      top: 340px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 4;
+      color: white;
+    }
+  
+    .footer__heading {
+      font-size: 2rem;
+      height: 20;
+   
+    }
+  
+    .footer__contact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 180px;
+      position: absolute;
+      top: 390px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+  
+    .footer__contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    .footer__icon {
+      width: 20px;
+      height: auto;
+    }
+  
+    .footer__contact-info {
+      font-size: 1rem;
+      color: white;
+    }
+  
+    .footer__to-top {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      height: 100px;
+      transform: translateX(-50%);
+      z-index: 6;
+    }
+  
+    .footer__button {
+      background-color: #0a846e;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .footer__button:hover {
+      background-color: #066655;
+    }
   }
 }
