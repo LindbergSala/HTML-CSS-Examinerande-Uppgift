@@ -15,7 +15,7 @@ body {
     border: 5px solid #e3e3e3;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-auto-rows: 33px;
+    grid-auto-rows: 30px;
 }
 
 nav {
@@ -40,6 +40,16 @@ nav {
 .main-nav__button:hover {
     color: #7d60fd;
     transform: scale(1.2);
+}
+
+.burgir {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: auto;
+    z-index: 9999;
 }
 
 header {
@@ -108,6 +118,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 10px;
+    margin-top: 80px;
 }
 
 /* Planting Section */
@@ -184,6 +195,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .section-2__heading {
@@ -206,7 +218,6 @@ main {
     padding-right: 65%;
 }
 
-/* Planned Plantings */
 .planned-plantings__card-1 {
     background-color: white;
     overflow: hidden;
@@ -348,6 +359,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .section-3__heading {
@@ -379,6 +391,8 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    height: 320px;
+    margin-top: 50px;
 }
 
 .section-4::before {
@@ -398,11 +412,12 @@ main {
     justify-content: space-around;
     align-items: center;
     z-index: 1;
+    gap: 10px;
 }
 
 .section-4__img {
-    width: 180px;
-    height: 250px;
+    width: 220px;
+    height: 315px;
     position: relative;
 }
 
@@ -425,6 +440,13 @@ footer {
     height: 20%;
 }
 
+.planned-plantings__remove-img {
+    display: none;
+}
+.planned-plantings__remove-btn {
+    display: inline-block;
+}
+
 .footer__button {
     background-color: white;
     color: #000000;
@@ -442,7 +464,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
     .wrapper {
         max-width: 100%;
         grid-template-columns: 1fr;
@@ -452,18 +473,27 @@ footer {
         min-height: 100vh;
     }
 
-
-    nav {
-        flex-direction: row;
-        padding: 20px 0;
-        justify-content: center;
-        align-items: center;
+    .planned-plantings__remove-btn {
+        display: none;
     }
 
-    .main-nav__button {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-        padding: 10px 20px;
+    .planned-plantings__remove-img {
+        display: inline-block !important;
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(1000%) hue-rotate(-10deg) brightness(95%) contrast(120%);
+    }
+
+    .burgir {
+        display: block;
+        padding-right: 400px;
+        padding-top: 10px;
+        width: 40px;
+    }
+
+    nav {
+        display: none;
     }
 
     header {
@@ -492,6 +522,10 @@ footer {
         flex-direction: column;
         gap: 20px;
         padding: 20px 0;
+    }
+
+    .planned-plantings__remove-img {
+        display: none;
     }
 
     .planting-section {
@@ -553,21 +587,108 @@ footer {
         padding: 0;
     }
 
-   
-    .section-4__row {
-        flex-direction: column;
-        gap: 20px;
+    .section-2__heading {
+        text-align: center;
+        display: block;
+        font-size: 20px;
     }
 
-    .section-4__img {
+        .section-2__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; 
+        align-items: center;
+    }
+
+    .planned-plantings__card-1 {
+        width: 50%; 
+        max-width: 50;
+        aspect-ratio: auto;
+        margin-right: 190px;
+    }
+
+    .planned-plantings__image-container {
+        height: auto;
         width: 100%;
+        overflow: hidden;
+    }
+
+    .planned-plantings__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+
+    .planned-plantings__overlay-icon {
+        width: 80px;
         height: auto;
     }
 
-   
+    .planned-plantings__plant-name {
+        font-size: 1.2rem;
+    }
+
+    .planned-plantings__date {
+        font-size: 1rem;
+    }
+
+    .planned-plantings__person {
+        font-size: 0.9rem;
+    }
+
+    .planned-plantings__remove-btn {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .section-3__heading {
+        text-align: center;
+        font-size: 20px;
+    
+    }
+
+    .section-3__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .planned-plantings__card-2 {
+        background-color: white;
+        overflow: hidden;
+        font-size: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex: 1 1 45%;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        aspect-ratio: 2.8/4;
+    }
+
+
+    .section-4__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section-4__img {
+        flex: 1 1 calc(50% - 20px);
+        width: 100px;
+        height: 160px;
+        object-fit: cover;
+      
+    }
+
     footer {
         margin-top: auto;
         width: 100%;
+        height: 70px;
     }
 
     .footer__to-top {
